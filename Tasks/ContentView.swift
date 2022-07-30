@@ -17,6 +17,8 @@ struct ContentView: View {
                     .tabItem {
                         Label("Tasks", systemImage: "checkmark.circle.fill")
                     }
+                TaskStatsView(taskManager: taskManager)
+                    .tabItem("Stats", systemImage: "chart.xyaxis.line")
             }
         }
     }

@@ -18,6 +18,7 @@
 		740D6BF92894CC570062428E /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740D6BF82894CC570062428E /* TaskDetailView.swift */; };
 		740D6BFD2894D6090062428E /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740D6BFC2894D6090062428E /* TaskManager.swift */; };
 		740D6BFF2894D9B30062428E /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740D6BFE2894D9B30062428E /* TaskListView.swift */; };
+		740D6C012894DD8E0062428E /* TaskStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740D6C002894DD8E0062428E /* TaskStatsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		740D6BF82894CC570062428E /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 		740D6BFC2894D6090062428E /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		740D6BFE2894D9B30062428E /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
+		740D6C002894DD8E0062428E /* TaskStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStatsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				740D6BCC2894C52F0062428E /* TasksApp.swift */,
 				740D6BCE2894C52F0062428E /* ContentView.swift */,
 				740D6BF82894CC570062428E /* TaskDetailView.swift */,
+				740D6C002894DD8E0062428E /* TaskStatsView.swift */,
 				740D6BF62894C7DF0062428E /* TodoItem.swift */,
 				740D6BD02894C5320062428E /* Assets.xcassets */,
 				740D6BD22894C5320062428E /* Preview Content */,
@@ -272,6 +275,7 @@
 				740D6BFF2894D9B30062428E /* TaskListView.swift in Sources */,
 				740D6BFD2894D6090062428E /* TaskManager.swift in Sources */,
 				740D6BF92894CC570062428E /* TaskDetailView.swift in Sources */,
+				740D6C012894DD8E0062428E /* TaskStatsView.swift in Sources */,
 				740D6BCF2894C52F0062428E /* ContentView.swift in Sources */,
 				740D6BF72894C7DF0062428E /* TodoItem.swift in Sources */,
 				740D6BCD2894C52F0062428E /* TasksApp.swift in Sources */,

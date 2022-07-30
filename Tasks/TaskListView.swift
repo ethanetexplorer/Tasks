@@ -13,18 +13,20 @@ struct TaskListView: View {
     
     var body: some View {
         NavigationView{
-            List($taskManager.taskItems){ $taskItem in
-                NavigationLink(destination: TaskDetailView(taskItem: $taskItem)){
-                    HStack {
-                            Image(systemName: taskItem.isDone ? "checkmark.diamond.fill": "diamond")
-                            .onTapGesture {
-                                taskItem.isDone.toggle()
-                            }
-                            Text(taskItem.title)
+            List{
+                ForEach($taskManager.taskItems){ $taskItem in
+                    NavigationLink(destination: TaskDetailView(taskItem: $taskItem)){
+                        HStack {
+                                Image(systemName: taskItem.isDone ? "checkmark.diamond.fill": "diamond")
+                                .onTapGesture {
+                                    taskItem.isDone.toggle()
+                                }
+                                Text(taskItem.title)
+                        }
                     }
                 }
+                .navigationTitle("Tasks")
             }
-            .navigationTitle("Tasks")
         }
     }
 }

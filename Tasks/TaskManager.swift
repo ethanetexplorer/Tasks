@@ -17,6 +17,12 @@ import SwiftUI
             }
         }
         
+        var undoneTasks: [TaskItem]{
+            taskItems.filter{
+                $0.isDone == false
+            }
+        }
+        
         let sampleTaskItems: [TaskItem] =  [
             TaskItem(title: "Walk the cat"),
             TaskItem(title: "Feed the cows"),
