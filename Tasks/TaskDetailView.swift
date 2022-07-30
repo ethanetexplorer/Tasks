@@ -9,15 +9,23 @@ import SwiftUI
 
 struct TaskDetailView: View {
     
-    var taskItem: TaskItem
+    @Binding var taskItem: TaskItem
     
     var body: some View {
-        Text(taskItem.title)
+        VStack{
+            Form{
+                TextField("Task title here", text: $taskItem.title)
+                    .foregroundColor(taskItem.isDone ? .red : .green)
+                Button(taskItem.isDone ? "Mark as incomplete" : "Mark as complete"){
+                    taskItem.isDone.toggle()
+                }
+            }
+        }
     }
 }
 
 struct TaskDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        TaskDetailView(taskItem: TaskItem(title: "Sample todo item"))
+        TaskDetailView(taskItem: .constant(TaskItem(title: "Sample todo item")))
     }
 }
