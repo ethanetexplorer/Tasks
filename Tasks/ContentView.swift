@@ -9,8 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        List{
+            Section("Section A: gibberish"){
+                Text("aerbug")
+                    .padding()
+                Text("asdf")
+                    .padding()
+            }
+            Section("Section B: repeated items"){
+                ForEach(0..<5){ item in
+                    Text("Repeated items")
+                        .padding()
+            }
+            }
+        }
     }
 }
 
