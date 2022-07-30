@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TaskItem: Identifiable{
+struct TaskItem: Identifiable, Codable{
     let id = UUID()
     var title: String
     var isDone = false // It is inferred that isDone is a bool 

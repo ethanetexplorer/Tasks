@@ -9,30 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var taskList = [
-    TaskItem(title: "Refill cow extract", priority: 1),
-    TaskItem(title: "Watch videos", isDone: true, priority: 3),
-    TaskItem(title: "Scam the class", priority: 2)
-    ]
+    @StateObject var taskManager =  TaskManager()
     
     var body: some View {
-            NavigationView{
-                List($taskList){ $taskItem in
-                    NavigationLink(destination: TaskDetailView(taskItem: $taskItem)){
-                        HStack {
-                                Image(systemName: taskItem.isDone ? "checkmark.diamond.fill": "diamond")
-                                .onTapGesture {
-                                    taskItem.isDone.toggle()
-                                }
-                                Text(taskItem.title)
-                        }
+            TabView {
+                TaskListView(taskManager: taskManager)
+                    .tabItem {
+                        Label("Tasks", systemImage: "checkmark.circle.fill")
                     }
-                }
-                .navigationTitle("Tasks")
             }
         }
     }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
